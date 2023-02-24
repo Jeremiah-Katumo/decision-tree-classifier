@@ -38,6 +38,7 @@ iris_test <- testing(split)
 
 
 ```{r}
+# Data preprocessing
 blueprint <- recipe(Species ~., data = iris_train) %>%
   step_center(all_numeric(), -all_outcomes()) %>%
   step_scale(all_numeric(), -all_outcomes()) %>%
